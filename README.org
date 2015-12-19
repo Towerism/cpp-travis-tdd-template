@@ -1,5 +1,4 @@
 * Generic Name
-Encryption Back Ends
 ** Requirements
 - CMake 2.8+
 ** Instructions
