@@ -4,13 +4,13 @@ set -ev
 TEST_CONFIG=
 
 if [ "${TEST_SUITE}" == "unit" ]; then
-  TEST_CONFIG=-DFRACKCRYPT_TEST_INTEGRATION=OFF
+  TEST_CONFIG=-DGENERIC_TEST_INTEGRATION=OFF
 elif [ "${TEST_SUITE}" == "integration" ]; then
-  TEST_CONFIG=-DFRACKCRYPT_TEST_UNIT=OFF
+  TEST_CONFIG=-DGENERIC_TEST_UNIT=OFF
 fi
 
 export CXX=g++-5
 mkdir -p build && cd build
-cmake -DFRACKCRYPT_TEST=ON ${TEST_CONFIG} ..
+cmake -DGENERIC_TEST=ON ${TEST_CONFIG} ..
 make
 ctest -VV
