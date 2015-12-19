@@ -1,4 +1,5 @@
 * Generic Name
+Use find/replace to change generic names to your project name
 ** Requirements
 - CMake 2.8+
 ** Instructions
